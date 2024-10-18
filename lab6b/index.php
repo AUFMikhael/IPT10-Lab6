@@ -1,30 +1,30 @@
 <?php
-
-require "Profile.php";
-
-$profile = new Profile(
-    "Dela Cruz",
-    "Juan",
-    "Dipasisiil"
-);
-
-$profile->setEmail('juan@delacruz.ph');
-$profile->setAddress('Barangay Mintal, Davao City, Philippines 8000');
-
+session_start();
+require "products.php";
+// Initialize cart if it doesn't exist
+if (!isset($_SESSION['cart'])) {
+    $_SESSION['cart'] = [];
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile: <?php echo $profile->getCompleteName(); ?></title>
+    <title>Product List</title>
 </head>
 <body>
-    <h1><?php echo $profile->getCompleteName(); ?></h1>
-    <h2><?php echo $profile->getEmail();?></h2>
-    <h2><?php echo $profile->getAddress();?></h2>
-    <p>
-        <?php echo $profile->getFavoriteQuote(); ?>
-    </p>
+    <h1>Products</h1>
+    <ul>
+        <?php foreach ($products as $product): ?>
+            <li>
+                <?php echo $product['name']; ?> - <?php echo $product['price']; ?> PHP
+                <form method="post" action="add-to-cart.php">
+                    <input type="hidden" name="product_id" value="<?php echo $product['id']; ?>">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+    <a href="cart.php">View Cart</a>
 </body>
 </html>

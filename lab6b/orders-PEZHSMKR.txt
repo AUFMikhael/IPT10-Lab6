@@ -1,0 +1,11 @@
+Order Code: PEZHSMKR
+Date: 2024-10-18 06:47:26
+
+Order Items:
+Product ID: 1 - Name: 1Kg Sugar - Price: 100 PHP
+Product ID: 2 - Name: 1L Milk - Price: 120 PHP
+Product ID: 3 - Name: One Dozen Eggs - Price: 200 PHP
+Product ID: 4 - Name: 5Kg Sugar - Price: 500 PHP
+Product ID: 6 - Name: One Tray Eggs - Price: 300 PHP
+
+Total Price: 1220 PHP

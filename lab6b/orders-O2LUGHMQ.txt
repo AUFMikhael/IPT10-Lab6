@@ -1,0 +1,7 @@
+Order Code: O2LUGHMQ
+Date: 2024-10-18 06:47:05
+
+Order Items:
+Product ID: 1 - Name: 1Kg Sugar - Price: 100 PHP
+
+Total Price: 100 PHP
